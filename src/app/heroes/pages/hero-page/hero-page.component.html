@@ -1,1 +1,34 @@
-<p>hero-page works!</p>
+
+<mat-card class="hero-card">
+  <mat-toolbar color="primary" class="hero-header">
+    <span>{{ hero.superhero }}</span>
+    <span class="spacer"></span>
+    <span>{{ hero.publisher }}</span>
+  </mat-toolbar>
+  <br>
+  <div class="hero-container">
+    <!-- Hero Image -->
+    <div class="hero-image-container">
+      <img mat-card-image [src]="hero.alt_img ? hero.alt_img : (hero | heroImage)" [alt]="hero.superhero" class="hero-image">
+    </div>
+
+    <!-- Hero Details -->
+    <mat-card class="hero-details">
+      <mat-card-header>
+        <mat-card-title>{{ hero.superhero }}</mat-card-title>
+        <mat-card-subtitle>{{ hero.alter_ego }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p><strong>ID:</strong> {{ hero.id }}</p>
+        <p><strong>First Appearance:</strong> {{ hero.first_appearance }}</p>
+        <p><strong>Characters:</strong> {{ hero.characters }}</p>
+        <p><strong>Publisher:</strong> {{ hero.publisher }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Back Button -->
+  <div class="button-container">
+    <button mat-raised-button color="accent" (click)="goBack()">Back</button>
+  </div>
+</mat-card>

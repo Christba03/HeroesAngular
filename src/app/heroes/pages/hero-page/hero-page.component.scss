@@ -1,0 +1,64 @@
+.hero-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #0e3650;
+  border-radius: 16px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.hero-image-container {
+  flex: 1;
+  max-width: 300px;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* Estilos mejorados de la barra */
+.hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #1e88e5 0%, #0d47a1 100%);
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Espaciador invisible */
+.spacer {
+  flex: 1;
+  opacity: 0.5;
+}
+
+.hero-details {
+  flex: 2;
+  font-size: 1.5rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+}
