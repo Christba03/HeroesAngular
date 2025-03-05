@@ -6,23 +6,40 @@
   margin: auto;
   background-color: #0e3650;
   border-radius: 16px;
+  box-shadow: 0 0 20px rgba(30, 136, 229, 0.6); /* Glowing effect */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.hero-card:hover {
+  box-shadow: 0 0 35px rgba(30, 136, 229, 0.9); /* Stronger glow on hover */
 }
 
 .hero-container {
   display: flex;
   align-items: center;
   gap: 32px;
+  margin-top: 20px; /* Added space between the toolbar and content */
 }
 
 .hero-image-container {
   flex: 1;
   max-width: 300px;
+  overflow: hidden;
+  border-radius: 16px;
 }
 
+/* 🚀 Efecto de zoom en la imagen */
 .hero-image {
   width: 100%;
   height: auto;
   border-radius: 16px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* 🎆 Aumenta de tamaño al pasar el mouse */
+.hero-image-container:hover .hero-image {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(30, 136, 229, 0.8);
 }
 
 /* Estilos mejorados de la barra */
@@ -37,6 +54,7 @@
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-bottom: 20px; /* Space between header and card content */
 }
 
 /* Espaciador invisible */
@@ -61,4 +79,14 @@ button {
   padding: 10px 20px;
   border-radius: 8px;
   font-weight: bold;
+  border: none;
+  background-color: #1e88e5;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0d47a1;
+  box-shadow: 0 0 10px rgba(30, 136, 229, 0.8); /* Glow on hover */
 }

@@ -1,1 +1,53 @@
-<p>new-page works!</p>
+<mat-card class="hero-form-card">
+    <mat-toolbar color="primary" class="hero-header">
+      <span>Edit Hero</span>
+    </mat-toolbar>
+  
+    <form [formGroup]="heroForm">
+      <div class="form-container">
+        <!-- Hero Image -->
+        <div class="hero-image-container">
+          <img mat-card-image [src]="heroForm.value.alt_img ? heroForm.value.alt_img : (heroForm.value | heroImage)" 
+               [alt]="heroForm.value.superhero" class="hero-image">
+        </div>
+  
+        <!-- Hero Fields -->
+        <mat-card class="hero-details">
+          <mat-form-field appearance="outline">
+            <mat-label>Superhero</mat-label>
+            <input matInput formControlName="superhero">
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Alter Ego</mat-label>
+            <input matInput formControlName="alter_ego">
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>First Appearance</mat-label>
+            <input matInput formControlName="first_appearance">
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Characters</mat-label>
+            <input matInput formControlName="characters">
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Publisher</mat-label>
+            <input matInput formControlName="publisher">
+          </mat-form-field>
+  
+
+        </mat-card>
+      </div>
+  
+      <!-- Buttons -->
+      <div class="button-container">
+        <button mat-raised-button color="primary" (click)="saveHero()">Save</button>
+        <button mat-raised-button color="warn" (click)="cancel()">Cancel</button>
+      </div>
+    </form>
+
+  </mat-card>
+  

@@ -13,6 +13,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./hero-page.component.scss'],
 })
 export class HeroPageComponent implements OnInit{
+  
   public hero: Hero = {} as Hero;
     //Declara una variable publica que almacenara los datos del heroe seleccionado
   constructor(
